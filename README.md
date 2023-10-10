@@ -12,7 +12,7 @@ Bookshelf adalah aplikasi sederhana untuk manajemen buku favorit Anda. Dengan ap
 ## Cara Penggunaan
 
 <video width="320" height="240" controls>
-  <source src="Demo.mp4" type="video/mp4">
+  <source src="Demo.MP4" type="video/mp4">
   Maaf, browser Anda tidak mendukung pemutaran video.
 </video>
 
