@@ -22,9 +22,9 @@ function generate_book (title, author, year, isComplete) {
         id: +new Date(),
         title,
         author,
-        year,
+        year: Number(year),
         isComplete,
-    }
+    };
 }
 
 // cari buku
@@ -119,8 +119,8 @@ function isCompleteBookHandler(itemElement) {
       return;
     }
   
-    const title = itemElement.childNodes[0].innerText;
-    const titleNameAttribut = itemElement.childNodes[0].getAttribute("name");
+    const title = itemElement.querySelector(".book-desc h3").innerText;
+    const titleNameAttribut = itemElement.getAttribute("itemId");
     for (let index = 0; index < bookData.length; index++) {
       if (bookData[index].title === title && bookData[index].id == titleNameAttribut) {
         bookData[index].isComplete = !bookData[index].isComplete;
