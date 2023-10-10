@@ -1,17 +1,19 @@
 const STORAGE_KEY = "BOOKSHELF_APP";
-const books = [];
+let books = [];
 
 const BOOK_ITEMID = "itemId"; 
 const COMPLETED_LIST_BOOK_ID = "completed"; 
 const UNCOMPLETED_LIST_BOOK_ID = "uncompleted"; 
 
 // periksa browser support
-function is_storage_exist() {
-    if (typeof (Storage) === undefined) {
-        alert('Maaf yaa, browsermu gak support local storage')
+function isStorageExist() {
+    try {
+        localStorage.setItem("test", "test");
+        localStorage.removeItem("test");
+        return true;
+    } catch (e) {
         return false;
     }
-    return true;
 }
 
 // bikin objek buku 
@@ -112,7 +114,7 @@ function createBook(bookTitle, bookAuthor, bookYear, isCompleted) {
 }
 
 function isCompleteBookHandler(itemElement) {
-    const bookData = GetBookList();
+    const bookData = books;
     if (bookData.length === 0) {
       return;
     }
@@ -125,7 +127,7 @@ function isCompleteBookHandler(itemElement) {
         break;
       }
     }
-    localStorage.setItem(storageKey, JSON.stringify(bookData));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(bookData));
 }
 
 // button
@@ -235,6 +237,7 @@ function removeBookFromCompleted(bookElement){
             )
         }
     })
+    updateDataToStorage();
 }
 
 // tambah buku
