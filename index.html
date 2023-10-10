@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf</title>
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- STYLE ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="container header">
+        <!-- NAVBAR -->
+        <nav class="nav">
+            <div class="logo">
+                <img src="img/Logo.svg" alt="logo-img">
+            </div>
+        </nav>
+        <!-- JUMBOTRON -->
+        <section class="wrapper">
+            <div class="container jumbotron">
+                <div class="grid-cols-2">
+                    <div class="grid-item-1">
+                        <h1 class="main-heading">
+                            Cari dan Tambahkan Buku Favoritmu!
+                        </h1>
+                        <p class="info-text">
+                            Selamat datang di Bookshelf, rumah bagi pecinta buku sejati! Di sini, Kamu dapat menjelajahi koleksi buku yang luas dan mencari serta menambahkan buku-buku favorit Kamu ke dalam perpustakaan pribadi Kamu. Temukan kisah-kisah yang menginspirasi, belajarlah dari para penulis terkenal, dan bagikan pengetahuan Anda dengan komunitas pembaca kami.
+                        </p>
+                        <button class="eksplor-btn">
+                            Eksplor Buku <i class="ti ti-arrow-narrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="grid-item-2">
+                        <div class="img-wrapper">
+                            <img src="img/img_header.png" alt="img_header">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="container">
+                <div class="search-box">
+                    <input id="searchbook" class="search-txt" type="text" name="" placeholder="Cari buku favoritmu">
+                    <a href="#" class="search-btn">
+                        <i class="ti ti-search"></i>
+                    </a>
+                </div>
+                <div class="grid-cols-2">
+                    <div class="grid-item-1 add-book">
+                        <form action="#" id="form" class="form">
+                            <h2>Tambah Buku</h2>
+                            <p>Masukkan buku yang mau kamu tambahkan</p>
+                            <div class="form-group">
+                                <input id="title" class="input" type="text" required>
+                                <div class="title"></div>
+                                <label for="title" class="placeholder">Judul</label>
+                            </div>
+                            <div class="form-group">
+                                <input id="author" class="input" type="text" required>
+                                <div class="title title-penulis"></div>
+                                <label for="author" class="placeholder">Penulis</label>
+                            </div>
+                            <div class="form-group">
+                                <input id="year" class="input" type="number" required>
+                                <div class="title title-tahun"></div>
+                                <label for="year" class="placeholder">Tahun</label>
+                            </div>
+                            <div class="input_inline">
+                                <input id="inputBookIsComplete" type="checkbox">
+                                <label for="inputBookIsComplete">Selesai dibaca</label>
+                            </div>
+                            <input type="submit" value="Masukkan buku ke rak" name="submit" class="submit-btn">
+                        </form>
+                    </div>
+                    <div class="grid-item-2 library">
+                        <div class="row">
+                            <h2>Belum Selesai Dibaca</h2>
+                            <div class="list-book" id="uncompleted">
+            
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <h2>Selesai Dibaca</h2>
+                            <div class="list-book" id="completed">
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <p>&#169; 2023 Bookshelf. Made with <i class="ti ti-heart-filled"></i> by Fauziah Reza Oktaviyani.</p>
+        <p>
+          <a href="https://instagram.com/okskidoki"><i class="ti ti-brand-instagram"></i></a>
+          <a href="https://dribbble.com/fzhokta"><i class="ti ti-brand-dribbble"></i></a>
+          <a href="https://github.com/fauziahreza"><i class="ti ti-brand-github"></i></a>
+        </p>      
+    </footer>
+    <!-- ANIMATE ON SCROLL JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- SWEET ALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- SCRIPT.JS -->
+    <script src="js/animate.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
